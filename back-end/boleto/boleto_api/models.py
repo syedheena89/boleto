@@ -11,8 +11,7 @@ class UserManager(BaseUserManager):
         user.set_password(password)
         user.save()
         return user
-    
-
+   
 class User(AbstractBaseUser):
     name = models.CharField(max_length=200)
     email = models.EmailField(max_length=200,unique=True)
